@@ -40,3 +40,8 @@ button.addEventListener('click', (e) => {
 });
 
 showToken('polkadot');
+showToken('elrond-erd-2');
+showToken('beefy-finance');
+showToken('bitcoin');
+showToken('aave');
+showToken('crypto-com-chain');

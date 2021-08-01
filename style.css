@@ -6,8 +6,12 @@
     background: rgb(231, 229, 229);
     min-height: 100vh;
 }
+#watchList {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+}
 .card {
-    width: 12.5%;
+    /*width: 15%;*/
     height: 120px;
     background: green;
     border-radius: 20px;
