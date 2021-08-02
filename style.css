@@ -3,7 +3,7 @@
     padding: 0;
 }
 #main {
-    background: rgb(231, 229, 229);
+    background: rgb(0, 0, 0);
     min-height: 100vh;
 }
 #watchList {
@@ -13,10 +13,24 @@
 .card {
     /*width: 15%;*/
     height: 120px;
-    background: green;
+    background: rgb(134, 153, 172);
     border-radius: 20px;
-    margin: 3px;
+    margin: 7px;
     padding: 10px;
     font-size: 1.0rem;
+    text-align: center;
     
+}
+.card:hover {
+    background: rgb(124, 168, 212);
+}
+.card:hover  span {
+    font-size: 1.rem;
+}
+.tokenDescription {
+    color: rgb(0, 22, 43);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.tokenChangeInTime {
+    font-size: 0.8rem;
 }

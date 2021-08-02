@@ -19,16 +19,27 @@ const showToken = async(tokenName) => {
     const coin = document.createElement('div');
     coin.classList.add('card');
     watchList.appendChild(coin);
+
+    let redGreen;
+    token.market_data.price_change_percentage_24h > 0 ? redGreen = "green" : redGreen = "#e70f0f";
+
     coin.innerHTML = 
     `
+    <div class="tokenDescription">
     <img src="${token.image.thumb}" />
     <strong>${token.symbol.toUpperCase()}</strong> - Rank : ${token.market_cap_rank} <br />
     Price : ${token.market_data.current_price.usd}$ <br />
-    24h change : ${token.market_data.price_change_percentage_24h}%
+    <div class="tokenChangeInTime">
+    24h change : <span style="color:${redGreen}">${token.market_data.price_change_percentage_24h}% / </span>
+    7d change : <span style="color:${redGreen}">${token.market_data.price_change_percentage_7d}% / </span>
+    30d change : <span style="color:${redGreen}">${token.market_data.price_change_percentage_30d}% / </span>
+    1y change : <span style="color:${redGreen}">${token.market_data.price_change_percentage_1y}% / </span>
+    </div>
+    </div>
     `;
     console.log(token)
 
-
+//.market_data.ath.usd && .ath_date .ath_change_percentage
 
 };
 
